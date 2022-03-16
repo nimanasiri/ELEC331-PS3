@@ -1,0 +1,351 @@
+-----  Stop and Wait Network Simulator Version 1.1 -------- 
+
+Enter the number of messages to simulate: Enter  packet loss probability [enter 0.0 for no loss]:Enter packet corruption probability [0.0 for no corruption]:Enter average time between messages from sender's layer5 [ > 0.0]:Enter TRACE:
+EVENT time: 1870.573975,  type: 1, fromlayer5  entity: 0
+I'm A in state WAIT_ABOVE
+Sending message aaaaaaaaaaaaaaaaaaaaÿ with seqnum 0 
+          TOLAYER3: packet being corrupted
+Transitioning to state WAIT_ACK for seqnum 0
+
+EVENT time: 1876.039062,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 0
+Got corrupt packet
+Resending ack with seqnum 1
+
+EVENT time: 1878.220703,  type: 2, fromlayer3  entity: 0
+I'm A in state WAIT_ACK for seqnum 0
+Got packet with seqnum 1, was expecting 0
+
+EVENT time: 1900.573975,  type: 0, timerinterrupt   entity: 0
+Timer went off, resending packet with seqnum 0 and msg aaaaaaaaaaaaaaaaaaaa
+
+EVENT time: 1902.594482,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 0
+Got packet with correct seqnum of 0
+Sending up payload with contents: aaaaaaaaaaaaaaaaaaaa
+Sending ACK with seqnum 0
+          TOLAYER3: packet being corrupted
+Will wait for msg with seqnum 1
+
+EVENT time: 1907.061768,  type: 2, fromlayer3  entity: 0
+I'm A in state WAIT_ACK for seqnum 0
+Got corrupt packet
+
+EVENT time: 1930.573975,  type: 0, timerinterrupt   entity: 0
+Timer went off, resending packet with seqnum 0 and msg aaaaaaaaaaaaaaaaaaaa
+          TOLAYER3: packet being lost
+
+EVENT time: 1960.573975,  type: 0, timerinterrupt   entity: 0
+Timer went off, resending packet with seqnum 0 and msg aaaaaaaaaaaaaaaaaaaa
+
+EVENT time: 1970.002441,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 1
+Got packet with seqnum 0, was expecting 1
+Resending ack with seqnum 0
+
+EVENT time: 1977.465332,  type: 2, fromlayer3  entity: 0
+I'm A in state WAIT_ACK for seqnum 0
+Received ack with correct seqnum of 0
+Changing to seqnum 1 and state WAIT_ABOVE
+
+EVENT time: 3512.483887,  type: 1, fromlayer5  entity: 0
+I'm A in state WAIT_ABOVE
+Sending message bbbbbbbbbbbbbbbbbbbbÿ with seqnum 1 
+Transitioning to state WAIT_ACK for seqnum 1
+
+EVENT time: 3515.214111,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 1
+Got packet with correct seqnum of 1
+Sending up payload with contents: bbbbbbbbbbbbbbbbbbbb
+Sending ACK with seqnum 1
+          TOLAYER3: packet being corrupted
+Will wait for msg with seqnum 0
+
+EVENT time: 3517.580566,  type: 2, fromlayer3  entity: 0
+I'm A in state WAIT_ACK for seqnum 1
+Got corrupt packet
+
+EVENT time: 3542.483887,  type: 0, timerinterrupt   entity: 0
+Timer went off, resending packet with seqnum 1 and msg bbbbbbbbbbbbbbbbbbbb
+          TOLAYER3: packet being lost
+
+EVENT time: 3572.483887,  type: 0, timerinterrupt   entity: 0
+Timer went off, resending packet with seqnum 1 and msg bbbbbbbbbbbbbbbbbbbb
+          TOLAYER3: packet being lost
+
+EVENT time: 3602.483887,  type: 0, timerinterrupt   entity: 0
+Timer went off, resending packet with seqnum 1 and msg bbbbbbbbbbbbbbbbbbbb
+
+EVENT time: 3608.732910,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 0
+Got packet with seqnum 1, was expecting 0
+Resending ack with seqnum 1
+
+EVENT time: 3610.213623,  type: 2, fromlayer3  entity: 0
+I'm A in state WAIT_ACK for seqnum 1
+Received ack with correct seqnum of 1
+Changing to seqnum 0 and state WAIT_ABOVE
+
+EVENT time: 4630.183594,  type: 1, fromlayer5  entity: 0
+I'm A in state WAIT_ABOVE
+Sending message ccccccccccccccccccccÿ with seqnum 0 
+Transitioning to state WAIT_ACK for seqnum 0
+
+EVENT time: 4636.544434,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 0
+Got packet with correct seqnum of 0
+Sending up payload with contents: cccccccccccccccccccc
+Sending ACK with seqnum 0
+          TOLAYER3: packet being lost
+Will wait for msg with seqnum 1
+
+EVENT time: 4660.183594,  type: 0, timerinterrupt   entity: 0
+Timer went off, resending packet with seqnum 0 and msg cccccccccccccccccccc
+
+EVENT time: 4661.242188,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 1
+Got packet with seqnum 0, was expecting 1
+Resending ack with seqnum 0
+          TOLAYER3: packet being lost
+
+EVENT time: 4690.183594,  type: 0, timerinterrupt   entity: 0
+Timer went off, resending packet with seqnum 0 and msg cccccccccccccccccccc
+
+EVENT time: 4695.457520,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 1
+Got packet with seqnum 0, was expecting 1
+Resending ack with seqnum 0
+          TOLAYER3: packet being lost
+
+EVENT time: 4720.183594,  type: 0, timerinterrupt   entity: 0
+Timer went off, resending packet with seqnum 0 and msg cccccccccccccccccccc
+
+EVENT time: 4728.964844,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 1
+Got packet with seqnum 0, was expecting 1
+Resending ack with seqnum 0
+          TOLAYER3: packet being lost
+
+EVENT time: 4750.183594,  type: 0, timerinterrupt   entity: 0
+Timer went off, resending packet with seqnum 0 and msg cccccccccccccccccccc
+          TOLAYER3: packet being lost
+
+EVENT time: 4780.183594,  type: 0, timerinterrupt   entity: 0
+Timer went off, resending packet with seqnum 0 and msg cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+
+EVENT time: 4785.002930,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 1
+Got corrupt packet
+Resending ack with seqnum 0
+
+EVENT time: 4788.664551,  type: 2, fromlayer3  entity: 0
+I'm A in state WAIT_ACK for seqnum 0
+Received ack with correct seqnum of 0
+Changing to seqnum 1 and state WAIT_ABOVE
+
+EVENT time: 5705.288086,  type: 1, fromlayer5  entity: 0
+I'm A in state WAIT_ABOVE
+Sending message ddddddddddddddddddddÿ with seqnum 1 
+Transitioning to state WAIT_ACK for seqnum 1
+
+EVENT time: 5706.565430,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 1
+Got packet with correct seqnum of 1
+Sending up payload with contents: dddddddddddddddddddd
+Sending ACK with seqnum 1
+          TOLAYER3: packet being corrupted
+Will wait for msg with seqnum 0
+
+EVENT time: 5712.183105,  type: 2, fromlayer3  entity: 0
+I'm A in state WAIT_ACK for seqnum 1
+Got corrupt packet
+
+EVENT time: 5735.288086,  type: 0, timerinterrupt   entity: 0
+Timer went off, resending packet with seqnum 1 and msg dddddddddddddddddddd
+          TOLAYER3: packet being corrupted
+
+EVENT time: 5737.319824,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 0
+Got corrupt packet
+Resending ack with seqnum 1
+          TOLAYER3: packet being corrupted
+
+EVENT time: 5745.062988,  type: 2, fromlayer3  entity: 0
+I'm A in state WAIT_ACK for seqnum 1
+Got corrupt packet
+
+EVENT time: 5765.288086,  type: 0, timerinterrupt   entity: 0
+Timer went off, resending packet with seqnum 1 and msg dddddddddddddddddddd
+
+EVENT time: 5771.979492,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 0
+Got packet with seqnum 1, was expecting 0
+Resending ack with seqnum 1
+          TOLAYER3: packet being corrupted
+
+EVENT time: 5777.452148,  type: 2, fromlayer3  entity: 0
+I'm A in state WAIT_ACK for seqnum 1
+Got corrupt packet
+
+EVENT time: 5795.288086,  type: 0, timerinterrupt   entity: 0
+Timer went off, resending packet with seqnum 1 and msg dddddddddddddddddddd
+
+EVENT time: 5800.674805,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 0
+Got packet with seqnum 1, was expecting 0
+Resending ack with seqnum 1
+
+EVENT time: 5802.378906,  type: 2, fromlayer3  entity: 0
+I'm A in state WAIT_ACK for seqnum 1
+Received ack with correct seqnum of 1
+Changing to seqnum 0 and state WAIT_ABOVE
+
+EVENT time: 7534.791016,  type: 1, fromlayer5  entity: 0
+I'm A in state WAIT_ABOVE
+Sending message eeeeeeeeeeeeeeeeeeeeÿ with seqnum 0 
+Transitioning to state WAIT_ACK for seqnum 0
+
+EVENT time: 7542.749023,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 0
+Got packet with correct seqnum of 0
+Sending up payload with contents: eeeeeeeeeeeeeeeeeeee
+Sending ACK with seqnum 0
+Will wait for msg with seqnum 1
+
+EVENT time: 7547.141602,  type: 2, fromlayer3  entity: 0
+I'm A in state WAIT_ACK for seqnum 0
+Received ack with correct seqnum of 0
+Changing to seqnum 1 and state WAIT_ABOVE
+
+EVENT time: 7651.169922,  type: 1, fromlayer5  entity: 0
+I'm A in state WAIT_ABOVE
+Sending message ffffffffffffffffffffÿ with seqnum 1 
+Transitioning to state WAIT_ACK for seqnum 1
+
+EVENT time: 7661.018066,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 1
+Got packet with correct seqnum of 1
+Sending up payload with contents: ffffffffffffffffffff
+Sending ACK with seqnum 1
+Will wait for msg with seqnum 0
+
+EVENT time: 7663.763184,  type: 2, fromlayer3  entity: 0
+I'm A in state WAIT_ACK for seqnum 1
+Received ack with correct seqnum of 1
+Changing to seqnum 0 and state WAIT_ABOVE
+
+EVENT time: 8255.224609,  type: 1, fromlayer5  entity: 0
+I'm A in state WAIT_ABOVE
+Sending message ggggggggggggggggggggÿ with seqnum 0 
+Transitioning to state WAIT_ACK for seqnum 0
+
+EVENT time: 8261.839844,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 0
+Got packet with correct seqnum of 0
+Sending up payload with contents: gggggggggggggggggggg
+Sending ACK with seqnum 0
+Will wait for msg with seqnum 1
+
+EVENT time: 8265.146484,  type: 2, fromlayer3  entity: 0
+I'm A in state WAIT_ACK for seqnum 0
+Received ack with correct seqnum of 0
+Changing to seqnum 1 and state WAIT_ABOVE
+
+EVENT time: 9763.475586,  type: 1, fromlayer5  entity: 0
+I'm A in state WAIT_ABOVE
+Sending message hhhhhhhhhhhhhhhhhhhhÿ with seqnum 1 
+          TOLAYER3: packet being corrupted
+Transitioning to state WAIT_ACK for seqnum 1
+
+EVENT time: 9764.989258,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 1
+Got corrupt packet
+Resending ack with seqnum 0
+          TOLAYER3: packet being corrupted
+
+EVENT time: 9766.086914,  type: 2, fromlayer3  entity: 0
+I'm A in state WAIT_ACK for seqnum 1
+Got corrupt packet
+
+EVENT time: 9793.475586,  type: 0, timerinterrupt   entity: 0
+Timer went off, resending packet with seqnum 1 and msg hhhhhhhhhhhhhhhhhhhh
+
+EVENT time: 9795.625000,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 1
+Got packet with correct seqnum of 1
+Sending up payload with contents: hhhhhhhhhhhhhhhhhhhh
+Sending ACK with seqnum 1
+          TOLAYER3: packet being corrupted
+Will wait for msg with seqnum 0
+
+EVENT time: 9797.208984,  type: 2, fromlayer3  entity: 0
+I'm A in state WAIT_ACK for seqnum 1
+Got corrupt packet
+
+EVENT time: 9823.475586,  type: 0, timerinterrupt   entity: 0
+Timer went off, resending packet with seqnum 1 and msg hhhhhhhhhhhhhhhhhhhh
+
+EVENT time: 9828.722656,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 0
+Got packet with seqnum 1, was expecting 0
+Resending ack with seqnum 1
+          TOLAYER3: packet being corrupted
+
+EVENT time: 9837.666016,  type: 2, fromlayer3  entity: 0
+I'm A in state WAIT_ACK for seqnum 1
+Got corrupt packet
+
+EVENT time: 9853.475586,  type: 0, timerinterrupt   entity: 0
+Timer went off, resending packet with seqnum 1 and msg hhhhhhhhhhhhhhhhhhhh
+          TOLAYER3: packet being corrupted
+
+EVENT time: 9862.797852,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 0
+Got corrupt packet
+Resending ack with seqnum 1
+          TOLAYER3: packet being corrupted
+
+EVENT time: 9865.793945,  type: 2, fromlayer3  entity: 0
+I'm A in state WAIT_ACK for seqnum 1
+Got corrupt packet
+
+EVENT time: 9883.475586,  type: 0, timerinterrupt   entity: 0
+Timer went off, resending packet with seqnum 1 and msg hhhhhhhhhhhhhhhhhhhh
+          TOLAYER3: packet being corrupted
+
+EVENT time: 9884.625000,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 0
+Got corrupt packet
+Resending ack with seqnum 1
+
+EVENT time: 9892.193359,  type: 2, fromlayer3  entity: 0
+I'm A in state WAIT_ACK for seqnum 1
+Received ack with correct seqnum of 1
+Changing to seqnum 0 and state WAIT_ABOVE
+
+EVENT time: 10932.203125,  type: 1, fromlayer5  entity: 0
+I'm A in state WAIT_ABOVE
+Sending message iiiiiiiiiiiiiiiiiiiiÿ with seqnum 0 
+Transitioning to state WAIT_ACK for seqnum 0
+
+EVENT time: 10940.149414,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 0
+Got packet with correct seqnum of 0
+Sending up payload with contents: iiiiiiiiiiiiiiiiiiii
+Sending ACK with seqnum 0
+Will wait for msg with seqnum 1
+
+EVENT time: 10944.875977,  type: 2, fromlayer3  entity: 0
+I'm A in state WAIT_ACK for seqnum 0
+Received ack with correct seqnum of 0
+Changing to seqnum 1 and state WAIT_ABOVE
+
+EVENT time: 11718.522461,  type: 1, fromlayer5  entity: 0
+I'm A in state WAIT_ABOVE
+Sending message jjjjjjjjjjjjjjjjjjjjÿ with seqnum 1 
+Transitioning to state WAIT_ACK for seqnum 1
+
+EVENT time: 11724.204102,  type: 2, fromlayer3  entity: 1
+ Simulator terminated at time 11724.204102
+ after sending 10 msgs from layer5

@@ -1,0 +1,874 @@
+-----  Stop and Wait Network Simulator Version 1.1 -------- 
+
+Enter the number of messages to simulate: Enter  packet loss probability [enter 0.0 for no loss]:Enter packet corruption probability [0.0 for no corruption]:Enter average time between messages from sender's layer5 [ > 0.0]:Enter TRACE:
+EVENT time: 18.705740,  type: 1, fromlayer5  entity: 0
+I'm A receiving a new message, base=1, nextseqnum=1, N=8
+Sending message aaaaaaaaaaaaaaaaaaaaÿ with seqnum 1 
+
+EVENT time: 24.170835,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 1
+Got packet with correct seqnum of 1
+Sending up payload with contents: aaaaaaaaaaaaaaaaaaaa
+Sending ACK with seqnum 1
+          TOLAYER3: packet being corrupted
+Will wait for msg with seqnum 2
+
+EVENT time: 29.402449,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=1 and nextseqnum= 2
+Got corrupt packet
+
+EVENT time: 35.124840,  type: 1, fromlayer5  entity: 0
+I'm A receiving a new message, base=1, nextseqnum=2, N=8
+Sending message bbbbbbbbbbbbbbbbbbbbÿ with seqnum 2 
+          TOLAYER3: packet being lost
+
+EVENT time: 37.680447,  type: 1, fromlayer5  entity: 0
+I'm A receiving a new message, base=1, nextseqnum=3, N=8
+Sending message ccccccccccccccccccccÿ with seqnum 3 
+          TOLAYER3: packet being corrupted
+
+EVENT time: 42.147713,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 2
+Got corrupt packet
+Resending ack with seqnum 1
+          TOLAYER3: packet being lost
+
+EVENT time: 46.394402,  type: 1, fromlayer5  entity: 0
+I'm A receiving a new message, base=1, nextseqnum=4, N=8
+Sending message ddddddddddddddddddddÿ with seqnum 4 
+
+EVENT time: 48.705742,  type: 0, timerinterrupt   entity: 0
+Timer went off, resending packets from 1 to 4
+          TOLAYER3: packet being corrupted
+
+EVENT time: 51.666630,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 2
+Got packet with seqnum 4, was expecting 2
+Resending ack with seqnum 1
+
+EVENT time: 54.979748,  type: 1, fromlayer5  entity: 0
+I'm A receiving a new message, base=1, nextseqnum=5, N=8
+Sending message eeeeeeeeeeeeeeeeeeeeÿ with seqnum 5 
+          TOLAYER3: packet being corrupted
+
+EVENT time: 55.825214,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=1 and nextseqnum= 6
+Warning: attempt to start a timer that is already started
+
+EVENT time: 55.869270,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 2
+Got packet with seqnum 1, was expecting 2
+Resending ack with seqnum 1
+
+EVENT time: 56.047821,  type: 1, fromlayer5  entity: 0
+I'm A receiving a new message, base=2, nextseqnum=6, N=8
+Sending message ffffffffffffffffffffÿ with seqnum 6 
+
+EVENT time: 56.177746,  type: 1, fromlayer5  entity: 0
+I'm A receiving a new message, base=2, nextseqnum=7, N=8
+Sending message ggggggggggggggggggggÿ with seqnum 7 
+          TOLAYER3: packet being corrupted
+
+EVENT time: 57.744465,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=2 and nextseqnum= 8
+Warning: attempt to start a timer that is already started
+
+EVENT time: 58.599510,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 2
+Got packet with correct seqnum of 2
+Sending up payload with contents: bbbbbbbbbbbbbbbbbbbb
+Sending ACK with seqnum 2
+          TOLAYER3: packet being corrupted
+Will wait for msg with seqnum 3
+
+EVENT time: 60.355190,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=2 and nextseqnum= 8
+Got corrupt packet
+
+EVENT time: 60.965851,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 3
+Got packet with correct seqnum of 3
+Sending up payload with contents: cccccccccccccccccccc
+Sending ACK with seqnum 3
+Will wait for msg with seqnum 4
+
+EVENT time: 62.749775,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 4
+Got corrupt packet
+Resending ack with seqnum 3
+
+EVENT time: 63.843689,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=2 and nextseqnum= 8
+Warning: attempt to start a timer that is already started
+
+EVENT time: 65.675743,  type: 1, fromlayer5  entity: 0
+I'm A receiving a new message, base=4, nextseqnum=8, N=8
+Sending message hhhhhhhhhhhhhhhhhhhhÿ with seqnum 8 
+
+EVENT time: 67.505455,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=4 and nextseqnum= 9
+Warning: attempt to start a timer that is already started
+
+EVENT time: 68.587746,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 4
+Got corrupt packet
+Resending ack with seqnum 3
+          TOLAYER3: packet being corrupted
+
+EVENT time: 69.894135,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 4
+Got packet with seqnum 6, was expecting 4
+Resending ack with seqnum 3
+          TOLAYER3: packet being lost
+
+EVENT time: 71.114418,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 4
+Got corrupt packet
+Resending ack with seqnum 3
+          TOLAYER3: packet being lost
+
+EVENT time: 72.391876,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 4
+Got packet with seqnum 8, was expecting 4
+Resending ack with seqnum 3
+          TOLAYER3: packet being corrupted
+
+EVENT time: 74.205414,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=4 and nextseqnum= 9
+Got corrupt packet
+
+EVENT time: 76.011749,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=4 and nextseqnum= 9
+Got corrupt packet
+
+EVENT time: 78.705742,  type: 0, timerinterrupt   entity: 0
+Timer went off, resending packets from 4 to 8
+          TOLAYER3: packet being lost
+          TOLAYER3: packet being lost
+
+EVENT time: 81.722778,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 4
+Got packet with seqnum 5, was expecting 4
+Resending ack with seqnum 3
+          TOLAYER3: packet being corrupted
+
+EVENT time: 83.970779,  type: 1, fromlayer5  entity: 0
+I'm A receiving a new message, base=4, nextseqnum=9, N=8
+Sending message iiiiiiiiiiiiiiiiiiiiÿ with seqnum 9 
+
+EVENT time: 85.134567,  type: 1, fromlayer5  entity: 0
+I'm A receiving a new message, base=4, nextseqnum=10, N=8
+Sending message jjjjjjjjjjjjjjjjjjjjÿ with seqnum 10 
+
+EVENT time: 86.476837,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 4
+Got packet with seqnum 6, was expecting 4
+Resending ack with seqnum 3
+
+EVENT time: 89.584717,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=4 and nextseqnum= 11
+Got corrupt packet
+
+EVENT time: 92.460938,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 4
+Got packet with seqnum 8, was expecting 4
+Resending ack with seqnum 3
+
+EVENT time: 99.432693,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=4 and nextseqnum= 11
+Warning: attempt to start a timer that is already started
+
+EVENT time: 100.418800,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 4
+Got packet with seqnum 9, was expecting 4
+Resending ack with seqnum 3
+
+EVENT time: 100.913628,  type: 1, fromlayer5  entity: 0
+I'm A receiving a new message, base=4, nextseqnum=11, N=8
+Sending message kkkkkkkkkkkkkkkkkkkkÿ with seqnum 11 
+          TOLAYER3: packet being lost
+
+EVENT time: 102.177933,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=4 and nextseqnum= 12
+Warning: attempt to start a timer that is already started
+
+EVENT time: 107.134262,  type: 1, fromlayer5  entity: 0
+I'm A receiving a new message, base=4, nextseqnum=12, N=8
+Ignoring call from above, is outside of window
+
+EVENT time: 108.705742,  type: 0, timerinterrupt   entity: 0
+Timer went off, resending packets from 4 to 11
+          TOLAYER3: packet being lost
+          TOLAYER3: packet being lost
+          TOLAYER3: packet being corrupted
+          TOLAYER3: packet being corrupted
+          TOLAYER3: packet being corrupted
+          TOLAYER3: packet being corrupted
+
+EVENT time: 109.244705,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 4
+Got packet with seqnum 10, was expecting 4
+Resending ack with seqnum 3
+          TOLAYER3: packet being corrupted
+
+EVENT time: 111.666115,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=4 and nextseqnum= 12
+Warning: attempt to start a timer that is already started
+
+EVENT time: 112.260986,  type: 1, fromlayer5  entity: 0
+I'm A receiving a new message, base=4, nextseqnum=12, N=8
+Ignoring call from above, is outside of window
+
+EVENT time: 115.503983,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 4
+Got packet with correct seqnum of 4
+Sending up payload with contents: dddddddddddddddddddd
+Sending ACK with seqnum 4
+          TOLAYER3: packet being corrupted
+Will wait for msg with seqnum 5
+
+EVENT time: 116.975952,  type: 1, fromlayer5  entity: 0
+I'm A receiving a new message, base=4, nextseqnum=12, N=8
+Ignoring call from above, is outside of window
+
+EVENT time: 117.307137,  type: 1, fromlayer5  entity: 0
+I'm A receiving a new message, base=4, nextseqnum=12, N=8
+Ignoring call from above, is outside of window
+
+EVENT time: 120.988564,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=4 and nextseqnum= 12
+Got corrupt packet
+
+EVENT time: 121.012825,  type: 1, fromlayer5  entity: 0
+I'm A receiving a new message, base=4, nextseqnum=12, N=8
+Ignoring call from above, is outside of window
+
+EVENT time: 121.404938,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 5
+Got corrupt packet
+Resending ack with seqnum 4
+
+EVENT time: 124.357964,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=4 and nextseqnum= 12
+Got corrupt packet
+
+EVENT time: 130.228058,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 5
+Got corrupt packet
+Resending ack with seqnum 4
+
+EVENT time: 131.811920,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 5
+Got corrupt packet
+Resending ack with seqnum 4
+
+EVENT time: 131.926483,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=4 and nextseqnum= 12
+Warning: attempt to start a timer that is already started
+
+EVENT time: 136.100189,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=5 and nextseqnum= 12
+Warning: attempt to start a timer that is already started
+
+EVENT time: 137.059052,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 5
+Got packet with seqnum 10, was expecting 5
+Resending ack with seqnum 4
+
+EVENT time: 138.705750,  type: 0, timerinterrupt   entity: 0
+Timer went off, resending packets from 5 to 11
+          TOLAYER3: packet being corrupted
+
+EVENT time: 138.845428,  type: 1, fromlayer5  entity: 0
+I'm A receiving a new message, base=5, nextseqnum=12, N=8
+Sending message qqqqqqqqqqqqqqqqqqqqÿ with seqnum 12 
+          TOLAYER3: packet being corrupted
+
+EVENT time: 143.702194,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=5 and nextseqnum= 13
+Warning: attempt to start a timer that is already started
+
+EVENT time: 146.002792,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 5
+Got corrupt packet
+Resending ack with seqnum 4
+
+EVENT time: 150.380814,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 5
+Got packet with correct seqnum of 5
+Sending up payload with contents: eeeeeeeeeeeeeeeeeeee
+Sending ACK with seqnum 5
+          TOLAYER3: packet being lost
+Will wait for msg with seqnum 6
+
+EVENT time: 151.735367,  type: 1, fromlayer5  entity: 0
+I'm A receiving a new message, base=5, nextseqnum=13, N=8
+Ignoring call from above, is outside of window
+
+EVENT time: 152.833084,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=5 and nextseqnum= 13
+Warning: attempt to start a timer that is already started
+
+EVENT time: 153.702576,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 6
+Got corrupt packet
+Resending ack with seqnum 5
+
+EVENT time: 155.299057,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 6
+Got packet with seqnum 7, was expecting 6
+Resending ack with seqnum 5
+
+EVENT time: 157.160782,  type: 1, fromlayer5  entity: 0
+I'm A receiving a new message, base=5, nextseqnum=13, N=8
+Ignoring call from above, is outside of window
+
+EVENT time: 159.017273,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 6
+Got packet with seqnum 8, was expecting 6
+Resending ack with seqnum 5
+
+EVENT time: 160.593063,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=5 and nextseqnum= 13
+Warning: attempt to start a timer that is already started
+
+EVENT time: 161.737396,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=5 and nextseqnum= 13
+Warning: attempt to start a timer that is already started
+
+EVENT time: 163.888947,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 6
+Got packet with seqnum 9, was expecting 6
+Resending ack with seqnum 5
+          TOLAYER3: packet being corrupted
+
+EVENT time: 164.155762,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=6 and nextseqnum= 13
+Warning: attempt to start a timer that is already started
+
+EVENT time: 168.705750,  type: 0, timerinterrupt   entity: 0
+Timer went off, resending packets from 6 to 12
+          TOLAYER3: packet being corrupted
+          TOLAYER3: packet being corrupted
+          TOLAYER3: packet being lost
+          TOLAYER3: packet being lost
+
+EVENT time: 169.344330,  type: 1, fromlayer5  entity: 0
+I'm A receiving a new message, base=6, nextseqnum=13, N=8
+Sending message ttttttttttttttttttttÿ with seqnum 13 
+          TOLAYER3: packet being lost
+
+EVENT time: 170.428177,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 6
+Got packet with seqnum 10, was expecting 6
+Resending ack with seqnum 5
+
+EVENT time: 172.911957,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=6 and nextseqnum= 14
+Warning: attempt to start a timer that is already started
+
+EVENT time: 174.535919,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 6
+Got packet with seqnum 11, was expecting 6
+Resending ack with seqnum 5
+
+EVENT time: 177.314499,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 6
+Got corrupt packet
+Resending ack with seqnum 5
+          TOLAYER3: packet being lost
+
+EVENT time: 179.177429,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 6
+Got packet with correct seqnum of 6
+Sending up payload with contents: ffffffffffffffffffff
+Sending ACK with seqnum 6
+          TOLAYER3: packet being corrupted
+Will wait for msg with seqnum 7
+
+EVENT time: 180.097900,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=6 and nextseqnum= 14
+Got corrupt packet
+
+EVENT time: 182.416519,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=6 and nextseqnum= 14
+Warning: attempt to start a timer that is already started
+
+EVENT time: 183.302399,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 7
+Got packet with correct seqnum of 7
+Sending up payload with contents: gggggggggggggggggggg
+Sending ACK with seqnum 7
+          TOLAYER3: packet being lost
+Will wait for msg with seqnum 8
+
+EVENT time: 183.491333,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=6 and nextseqnum= 14
+Warning: attempt to start a timer that is already started
+
+EVENT time: 185.338531,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=6 and nextseqnum= 14
+Got corrupt packet
+
+EVENT time: 187.112732,  type: 1, fromlayer5  entity: 0
+I'm A receiving a new message, base=6, nextseqnum=14, N=8
+Ignoring call from above, is outside of window
+
+EVENT time: 193.227829,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 8
+Got packet with correct seqnum of 8
+Sending up payload with contents: hhhhhhhhhhhhhhhhhhhh
+Sending ACK with seqnum 8
+Will wait for msg with seqnum 9
+
+EVENT time: 195.641556,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 9
+Got corrupt packet
+Resending ack with seqnum 8
+          TOLAYER3: packet being lost
+
+EVENT time: 198.586166,  type: 1, fromlayer5  entity: 0
+I'm A receiving a new message, base=6, nextseqnum=14, N=8
+Ignoring call from above, is outside of window
+
+EVENT time: 198.705750,  type: 0, timerinterrupt   entity: 0
+Timer went off, resending packets from 6 to 13
+          TOLAYER3: packet being lost
+          TOLAYER3: packet being corrupted
+
+EVENT time: 199.062912,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=6 and nextseqnum= 14
+Warning: attempt to start a timer that is already started
+
+EVENT time: 200.072540,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 9
+Got corrupt packet
+Resending ack with seqnum 8
+
+EVENT time: 206.139893,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=9 and nextseqnum= 14
+Warning: attempt to start a timer that is already started
+
+EVENT time: 207.246796,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 9
+Got corrupt packet
+Resending ack with seqnum 8
+
+EVENT time: 209.149246,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=9 and nextseqnum= 14
+Warning: attempt to start a timer that is already started
+
+EVENT time: 209.165115,  type: 1, fromlayer5  entity: 0
+I'm A receiving a new message, base=9, nextseqnum=14, N=8
+Sending message wwwwwwwwwwwwwwwwwwwwÿ with seqnum 14 
+          TOLAYER3: packet being corrupted
+
+EVENT time: 213.042328,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 9
+Got packet with seqnum 8, was expecting 9
+Resending ack with seqnum 8
+          TOLAYER3: packet being lost
+
+EVENT time: 219.356979,  type: 1, fromlayer5  entity: 0
+I'm A receiving a new message, base=9, nextseqnum=15, N=8
+Sending message xxxxxxxxxxxxxxxxxxxxÿ with seqnum 15 
+
+EVENT time: 219.661224,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 9
+Got packet with correct seqnum of 9
+Sending up payload with contents: iiiiiiiiiiiiiiiiiiii
+Sending ACK with seqnum 9
+Will wait for msg with seqnum 10
+
+EVENT time: 223.117615,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=9 and nextseqnum= 16
+Warning: attempt to start a timer that is already started
+
+EVENT time: 226.817627,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 10
+Got packet with correct seqnum of 10
+Sending up payload with contents: jjjjjjjjjjjjjjjjjjjj
+Sending ACK with seqnum 10
+Will wait for msg with seqnum 11
+
+EVENT time: 228.705750,  type: 0, timerinterrupt   entity: 0
+Timer went off, resending packets from 10 to 15
+          TOLAYER3: packet being lost
+          TOLAYER3: packet being corrupted
+
+EVENT time: 230.994141,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 11
+Got packet with correct seqnum of 11
+Sending up payload with contents: kkkkkkkkkkkkkkkkkkkk
+Sending ACK with seqnum 11
+Will wait for msg with seqnum 12
+
+EVENT time: 234.504181,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 12
+Got packet with correct seqnum of 12
+Sending up payload with contents: qqqqqqqqqqqqqqqqqqqq
+Sending ACK with seqnum 12
+Will wait for msg with seqnum 13
+
+EVENT time: 234.746826,  type: 1, fromlayer5  entity: 0
+I'm A receiving a new message, base=10, nextseqnum=16, N=8
+Sending message yyyyyyyyyyyyyyyyyyyyÿ with seqnum 16 
+
+EVENT time: 234.877960,  type: 1, fromlayer5  entity: 0
+I'm A receiving a new message, base=10, nextseqnum=17, N=8
+Sending message zzzzzzzzzzzzzzzzzzzzÿ with seqnum 17 
+
+EVENT time: 236.430420,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=10 and nextseqnum= 18
+Warning: attempt to start a timer that is already started
+
+EVENT time: 237.477280,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=11 and nextseqnum= 18
+Warning: attempt to start a timer that is already started
+
+EVENT time: 238.861420,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 13
+Got packet with correct seqnum of 13
+Sending up payload with contents: tttttttttttttttttttt
+Sending ACK with seqnum 13
+          TOLAYER3: packet being corrupted
+Will wait for msg with seqnum 14
+
+EVENT time: 245.449570,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=12 and nextseqnum= 18
+Warning: attempt to start a timer that is already started
+
+EVENT time: 248.538834,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 14
+Got corrupt packet
+Resending ack with seqnum 13
+          TOLAYER3: packet being lost
+
+EVENT time: 251.367050,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=13 and nextseqnum= 18
+Got corrupt packet
+
+EVENT time: 251.407806,  type: 1, fromlayer5  entity: 0
+I'm A receiving a new message, base=13, nextseqnum=18, N=8
+Sending message aaaaaaaaaaaaaaaaaaaaÿ with seqnum 18 
+          TOLAYER3: packet being lost
+
+EVENT time: 255.376312,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 14
+Got packet with seqnum 15, was expecting 14
+Resending ack with seqnum 13
+          TOLAYER3: packet being lost
+
+EVENT time: 256.682129,  type: 1, fromlayer5  entity: 0
+I'm A receiving a new message, base=13, nextseqnum=19, N=8
+Sending message bbbbbbbbbbbbbbbbbbbbÿ with seqnum 19 
+          TOLAYER3: packet being lost
+
+EVENT time: 258.705750,  type: 0, timerinterrupt   entity: 0
+Timer went off, resending packets from 13 to 19
+          TOLAYER3: packet being lost
+
+EVENT time: 260.549866,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 14
+Got packet with seqnum 11, was expecting 14
+Resending ack with seqnum 13
+          TOLAYER3: packet being lost
+
+EVENT time: 262.973969,  type: 1, fromlayer5  entity: 0
+I'm A receiving a new message, base=13, nextseqnum=20, N=8
+Sending message ccccccccccccccccccccÿ with seqnum 20 
+
+EVENT time: 263.856049,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 14
+Got packet with seqnum 12, was expecting 14
+Resending ack with seqnum 13
+          TOLAYER3: packet being corrupted
+
+EVENT time: 265.313934,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 14
+Got corrupt packet
+Resending ack with seqnum 13
+
+EVENT time: 269.867645,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 14
+Got packet with correct seqnum of 14
+Sending up payload with contents: wwwwwwwwwwwwwwwwwwww
+Sending ACK with seqnum 14
+Will wait for msg with seqnum 15
+
+EVENT time: 272.200165,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=13 and nextseqnum= 21
+Got corrupt packet
+
+EVENT time: 277.670990,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=13 and nextseqnum= 21
+Warning: attempt to start a timer that is already started
+
+EVENT time: 279.007690,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 15
+Got packet with correct seqnum of 15
+Sending up payload with contents: xxxxxxxxxxxxxxxxxxxx
+Sending ACK with seqnum 15
+Will wait for msg with seqnum 16
+
+EVENT time: 280.745819,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=14 and nextseqnum= 21
+Warning: attempt to start a timer that is already started
+
+EVENT time: 281.193542,  type: 1, fromlayer5  entity: 0
+I'm A receiving a new message, base=15, nextseqnum=21, N=8
+Sending message ddddddddddddddddddddÿ with seqnum 21 
+
+EVENT time: 281.467712,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 16
+Got packet with correct seqnum of 16
+Sending up payload with contents: yyyyyyyyyyyyyyyyyyyy
+Sending ACK with seqnum 16
+          TOLAYER3: packet being lost
+Will wait for msg with seqnum 17
+
+EVENT time: 283.926758,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=15 and nextseqnum= 22
+Warning: attempt to start a timer that is already started
+
+EVENT time: 284.595886,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 17
+Got packet with correct seqnum of 17
+Sending up payload with contents: zzzzzzzzzzzzzzzzzzzz
+Sending ACK with seqnum 17
+Will wait for msg with seqnum 18
+
+EVENT time: 286.863983,  type: 1, fromlayer5  entity: 0
+I'm A receiving a new message, base=16, nextseqnum=22, N=8
+Sending message eeeeeeeeeeeeeeeeeeeeÿ with seqnum 22 
+
+EVENT time: 288.705750,  type: 0, timerinterrupt   entity: 0
+Timer went off, resending packets from 16 to 22
+          TOLAYER3: packet being corrupted
+          TOLAYER3: packet being lost
+
+EVENT time: 292.199860,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 18
+Got packet with seqnum 13, was expecting 18
+Resending ack with seqnum 17
+          TOLAYER3: packet being corrupted
+
+EVENT time: 293.306000,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 18
+Got packet with seqnum 14, was expecting 18
+Resending ack with seqnum 17
+          TOLAYER3: packet being lost
+
+EVENT time: 293.738708,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=16 and nextseqnum= 23
+Warning: attempt to start a timer that is already started
+
+EVENT time: 296.591705,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 18
+Got packet with seqnum 15, was expecting 18
+Resending ack with seqnum 17
+          TOLAYER3: packet being lost
+
+EVENT time: 299.438263,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 18
+Got packet with seqnum 17, was expecting 18
+Resending ack with seqnum 17
+
+EVENT time: 301.234436,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=18 and nextseqnum= 23
+Got corrupt packet
+
+EVENT time: 304.404938,  type: 1, fromlayer5  entity: 0
+I'm A receiving a new message, base=18, nextseqnum=23, N=8
+Sending message ffffffffffffffffffffÿ with seqnum 23 
+          TOLAYER3: packet being lost
+
+EVENT time: 305.304932,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 18
+Got packet with correct seqnum of 18
+Sending up payload with contents: aaaaaaaaaaaaaaaaaaaa
+Sending ACK with seqnum 18
+Will wait for msg with seqnum 19
+
+EVENT time: 308.031128,  type: 1, fromlayer5  entity: 0
+I'm A receiving a new message, base=18, nextseqnum=24, N=8
+Sending message ggggggggggggggggggggÿ with seqnum 24 
+
+EVENT time: 309.610016,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 19
+Got packet with correct seqnum of 19
+Sending up payload with contents: bbbbbbbbbbbbbbbbbbbb
+Sending ACK with seqnum 19
+Will wait for msg with seqnum 20
+
+EVENT time: 310.650360,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=18 and nextseqnum= 25
+Warning: attempt to start a timer that is already started
+
+EVENT time: 312.053833,  type: 1, fromlayer5  entity: 0
+I'm A receiving a new message, base=18, nextseqnum=25, N=8
+Sending message hhhhhhhhhhhhhhhhhhhhÿ with seqnum 25 
+
+EVENT time: 316.737305,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 20
+Got packet with correct seqnum of 20
+Sending up payload with contents: cccccccccccccccccccc
+Sending ACK with seqnum 20
+Will wait for msg with seqnum 21
+
+EVENT time: 318.705750,  type: 0, timerinterrupt   entity: 0
+Timer went off, resending packets from 18 to 25
+          TOLAYER3: packet being lost
+          TOLAYER3: packet being lost
+          TOLAYER3: packet being corrupted
+          TOLAYER3: packet being corrupted
+          TOLAYER3: packet being lost
+
+EVENT time: 318.917511,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 21
+Got packet with correct seqnum of 21
+Sending up payload with contents: dddddddddddddddddddd
+Sending ACK with seqnum 21
+Will wait for msg with seqnum 22
+
+EVENT time: 320.113647,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=18 and nextseqnum= 26
+Warning: attempt to start a timer that is already started
+
+EVENT time: 325.539215,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 22
+Got packet with correct seqnum of 22
+Sending up payload with contents: eeeeeeeeeeeeeeeeeeee
+Sending ACK with seqnum 22
+          TOLAYER3: packet being corrupted
+Will wait for msg with seqnum 23
+
+EVENT time: 327.091736,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=19 and nextseqnum= 26
+Warning: attempt to start a timer that is already started
+
+EVENT time: 328.154907,  type: 1, fromlayer5  entity: 0
+I'm A receiving a new message, base=20, nextseqnum=26, N=8
+Sending message iiiiiiiiiiiiiiiiiiiiÿ with seqnum 26 
+          TOLAYER3: packet being corrupted
+
+EVENT time: 331.876526,  type: 1, fromlayer5  entity: 0
+I'm A receiving a new message, base=20, nextseqnum=27, N=8
+Sending message jjjjjjjjjjjjjjjjjjjjÿ with seqnum 27 
+          TOLAYER3: packet being corrupted
+
+EVENT time: 333.159424,  type: 1, fromlayer5  entity: 0
+I'm A receiving a new message, base=20, nextseqnum=28, N=8
+Ignoring call from above, is outside of window
+
+EVENT time: 333.370728,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 23
+Got corrupt packet
+Resending ack with seqnum 22
+
+EVENT time: 335.034149,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 23
+Got packet with seqnum 17, was expecting 23
+Resending ack with seqnum 22
+
+EVENT time: 335.264435,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=20 and nextseqnum= 28
+Warning: attempt to start a timer that is already started
+
+EVENT time: 338.337067,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 23
+Got packet with seqnum 18, was expecting 23
+Resending ack with seqnum 22
+          TOLAYER3: packet being corrupted
+
+EVENT time: 344.112854,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=21 and nextseqnum= 28
+Warning: attempt to start a timer that is already started
+
+EVENT time: 344.868042,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 23
+Got packet with seqnum 20, was expecting 23
+Resending ack with seqnum 22
+
+EVENT time: 346.284332,  type: 1, fromlayer5  entity: 0
+I'm A receiving a new message, base=22, nextseqnum=28, N=8
+Sending message llllllllllllllllllllÿ with seqnum 28 
+
+EVENT time: 348.705750,  type: 0, timerinterrupt   entity: 0
+Timer went off, resending packets from 22 to 28
+          TOLAYER3: packet being corrupted
+          TOLAYER3: packet being corrupted
+
+EVENT time: 351.206757,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=22 and nextseqnum= 29
+Got corrupt packet
+
+EVENT time: 352.071411,  type: 1, fromlayer5  entity: 0
+I'm A receiving a new message, base=22, nextseqnum=29, N=8
+Sending message mmmmmmmmmmmmmmmmmmmmÿ with seqnum 29 
+          TOLAYER3: packet being lost
+
+EVENT time: 353.877594,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 23
+Got packet with seqnum 21, was expecting 23
+Resending ack with seqnum 22
+          TOLAYER3: packet being lost
+
+EVENT time: 358.971405,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=22 and nextseqnum= 30
+Warning: attempt to start a timer that is already started
+
+EVENT time: 360.193085,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 23
+Got packet with seqnum 22, was expecting 23
+Resending ack with seqnum 22
+
+EVENT time: 362.807465,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=23 and nextseqnum= 30
+Warning: attempt to start a timer that is already started
+
+EVENT time: 364.868256,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 23
+Got packet with seqnum 24, was expecting 23
+Resending ack with seqnum 22
+
+EVENT time: 367.061951,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=23 and nextseqnum= 30
+Got corrupt packet
+
+EVENT time: 370.206604,  type: 1, fromlayer5  entity: 0
+I'm A receiving a new message, base=23, nextseqnum=30, N=8
+Sending message nnnnnnnnnnnnnnnnnnnnÿ with seqnum 30 
+          TOLAYER3: packet being corrupted
+
+EVENT time: 371.636993,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=23 and nextseqnum= 31
+Warning: attempt to start a timer that is already started
+
+EVENT time: 374.031403,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 23
+Got packet with seqnum 25, was expecting 23
+Resending ack with seqnum 22
+
+EVENT time: 376.418335,  type: 2, fromlayer3  entity: 0
+I'm A and just got a packet, base=23 and nextseqnum= 31
+Warning: attempt to start a timer that is already started
+
+EVENT time: 378.519592,  type: 2, fromlayer3  entity: 1
+I'm B waiting for seqnum 23
+Got packet with seqnum 18, was expecting 23
+Resending ack with seqnum 22
+          TOLAYER3: packet being lost
+
+EVENT time: 378.705750,  type: 0, timerinterrupt   entity: 0
+Timer went off, resending packets from 23 to 30
+          TOLAYER3: packet being lost
+          TOLAYER3: packet being corrupted
+
+EVENT time: 380.016937,  type: 1, fromlayer5  entity: 0
+I'm A receiving a new message, base=23, nextseqnum=31, N=8
+Ignoring call from above, is outside of window
+
+EVENT time: 380.503510,  type: 2, fromlayer3  entity: 1
+ Simulator terminated at time 380.503510
+ after sending 41 msgs from layer5
